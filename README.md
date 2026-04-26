@@ -1,3 +1,95 @@
+# ☕ BrewHub - Mini E-Commerce Coffee Shop
+
+## Deskripsi Project
+
+BrewHub adalah aplikasi mini e-commerce berbasis Laravel dan Inertia.js (Vue) yang menyediakan berbagai menu kopi dan minuman lainnya.
+Project ini dibuat untuk memenuhi tugas capstone divisi programming.
+
+---
+
+## Fitur yang Tersedia
+
+### 👤 User
+
+- Register & Login
+- Melihat daftar produk
+- Menampilkan menu kopi dan minuman
+- UI berbasis Tailwind (tema coffee shop)
+
+### 🛠️ Admin _(coming soon)_
+
+- CRUD produk
+- Manajemen pesanan
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- Laravel
+- Inertia.js + Vue
+- Tailwind CSS
+- MySQL (XAMPP)
+
+---
+
+## ⚙️ Cara Instalasi
+
+```bash
+git clone https://github.com/Admnoer/brewhub.git
+cd brewhub
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+```
+
+Edit `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=brewhub
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Lalu:
+
+```bash
+php artisan migrate
+```
+
+---
+
+## ▶️ Cara Menjalankan
+
+```bash
+php artisan serve
+npm run dev
+```
+
+Buka:
+
+```
+http://127.0.0.1:8000/products
+```
+
+---
+
+## 📌 Catatan
+
+- Pastikan XAMPP aktif (MySQL)
+- Data produk menggunakan dummy
+- UI menggunakan Vue + Tailwind
+
+---
+
+## 👨‍💻 Developer
+
+- Nama: CX-17_NOer
+- Project: BrewHub
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
