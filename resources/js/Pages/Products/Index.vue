@@ -1,47 +1,63 @@
 <script setup>
-defineProps({
-    products: Array,
-});
+defineProps({ products: Array });
+
+import { router } from "@inertiajs/vue3";
+const addToCart = (id) => router.post(`/cart/add/${id}`);
 </script>
 
 <template>
-    <div class="relative min-h-screen bg-[#0f172a] text-white overflow-hidden">
-        <!-- Background Coffee Beans -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none">
-            <div class="absolute top-10 left-10 text-6xl">☕</div>
-            <div class="absolute top-40 right-20 text-5xl">☕</div>
-            <div class="absolute bottom-20 left-32 text-7xl">☕</div>
-            <div class="absolute bottom-40 right-10 text-6xl">☕</div>
+    <div class="min-h-screen bg-[#0f172a] text-white">
+        <!-- NAVBAR -->
+        <div
+            class="flex justify-between items-center px-8 py-4 border-b border-yellow-500/20"
+        >
+            <a href="/products" class="text-xl font-bold text-yellow-400">
+                BrewHub ☕
+            </a>
+
+            <div class="flex gap-4 items-center">
+                <a href="/history" class="text-yellow-400 hover:underline">
+                    Riwayat
+                </a>
+                <a href="/cart" class="text-2xl"> 🛒 </a>
+            </div>
         </div>
 
-        <div class="relative p-8">
+        <!-- CONTENT -->
+        <div class="p-8">
             <h1 class="text-3xl font-bold text-center mb-8 text-yellow-400">
-                ☕ BrewHub Coffee Menu
+                Coffee Menu
             </h1>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <div
                     v-for="p in products"
                     :key="p.id"
-                    class="bg-[#1e293b] border border-yellow-500/20 rounded-2xl p-5 shadow-lg hover:scale-105 transition"
+                    class="bg-[#1e293b] p-5 rounded-xl"
                 >
-                    <h2 class="text-xl font-semibold text-yellow-300 mb-1">
-                        {{ p.name }}
-                    </h2>
+                    <h2 class="text-yellow-300 font-bold">{{ p.name }}</h2>
 
-                    <span
-                        class="text-xs bg-yellow-500 text-black px-2 py-1 rounded"
-                    >
-                        {{ p.category }}
-                    </span>
-
-                    <p class="text-sm text-gray-300 mt-2">
+                    <p class="text-sm mt-2 text-gray-300 line-clamp-3">
                         {{ p.description }}
                     </p>
 
-                    <p class="text-lg font-bold text-yellow-400 mt-3">
+                    <p class="mt-2 text-yellow-400 font-bold">
                         Rp {{ p.price }}
                     </p>
+
+                    <a
+                        :href="`/products/${p.id}`"
+                        class="block text-blue-400 mt-2"
+                    >
+                        Detail
+                    </a>
+
+                    <button
+                        @click="addToCart(p.id)"
+                        class="mt-3 w-full bg-yellow-500 text-black py-2 rounded"
+                    >
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>

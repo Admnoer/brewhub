@@ -14,8 +14,8 @@ class ProductController extends Controller
     public function index()
     {
         return Inertia::render('Products/Index', [
-        'products' => Product::all()
-    ]);
+            'products' => Product::all()
+        ]);
     }
 
     /**
@@ -23,7 +23,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Products/Create');
     }
 
     /**
@@ -31,23 +31,31 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Product::create($request->all());
+
+        return redirect('/products');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
-    {
-        //
-    }
+    public function show($id)
+{
+    $product = \App\Models\Product::find($id);
+
+    return \Inertia\Inertia::render('Products/Show', [
+        'product' => $product
+    ]);
+}
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Product $product)
     {
-        //
+        return Inertia::render('Products/Edit', [
+            'product' => $product
+        ]);
     }
 
     /**
@@ -55,7 +63,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->update($request->all());
+
+        return redirect('/products');
     }
 
     /**
@@ -63,6 +73,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect('/products');
     }
 }
