@@ -1,4 +1,115 @@
-# ☕ BrewHub - Mini E-Commerce Coffee Shop
+# # ☕ BrewHub - Mini E-Commerce Coffee Shop
+
+BrewHub adalah aplikasi mini e-commerce berbasis Laravel dan Inertia.js (Vue) yang mensimulasikan toko kopi.
+User dapat melihat menu, menambahkan produk ke keranjang, melakukan checkout, serta melihat riwayat pembelian.
+
+Project ini dibuat sebagai bagian dari tugas capstone divisi programming.
+
+---
+
+## Fitur yang Tersedia
+
+### 👤 User
+
+- Register & Login
+- Melihat daftar produk
+- Melihat detail produk
+- Menambahkan produk ke keranjang
+- Melihat isi keranjang
+- Checkout pesanan
+- Melihat riwayat pembelian
+
+---
+
+### 🛠️ Admin
+
+- CRUD produk (tambah, edit, hapus)
+- Melihat data pesanan
+- Update status pesanan
+
+---
+
+## ⚙️ Cara Instalasi 
+
+1. Membuat project Laravel:
+
+```bash
+composer create-project laravel/laravel brewhub
+cd brewhub
+```
+
+2. Install dependency:
+
+```bash
+composer install
+npm install
+```
+
+3. Install Inertia + Vue:
+
+```bash
+composer require inertiajs/inertia-laravel
+npm install vue@3 @inertiajs/vue3
+```
+
+4. Setup environment:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+5. Konfigurasi database di file `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=brewhub
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+6. Jalankan migrasi database:
+
+```bash
+php artisan migrate
+```
+
+---
+
+## ▶️ Cara Menjalankan Project
+
+1. Jalankan server Laravel:
+
+```bash
+php artisan serve
+```
+
+2. Jalankan frontend:
+
+```bash
+npm run dev
+```
+
+3. Buka di browser:
+
+```
+http://127.0.0.1:8000/products
+```
+
+---
+
+## 📌 Catatan
+
+- Project menggunakan data dummy produk
+- UI dibuat menggunakan Tailwind CSS dengan tema coffee shop
+- Pastikan MySQL/XAMPP sudah aktif sebelum menjalankan project
+- Semua fitur utama sudah dapat dijalankan dengan baik
+
+---
+
+<!-- # ☕ BrewHub - Mini E-Commerce Coffee Shop
 
 ## Deskripsi Project
 
@@ -81,7 +192,7 @@ http://127.0.0.1:8000/products
 
 - Pastikan XAMPP aktif (MySQL)
 - Data produk menggunakan dummy
-- UI menggunakan Vue + Tailwind
+- UI menggunakan Vue + Tailwind -->
 
 ---
 

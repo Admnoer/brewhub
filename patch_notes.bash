@@ -2733,3 +2733,32 @@ ng tetap terasa.'
 > exit
 
    INFO  Goodbye.
+npm run
+php artisan serve
+npm run dev
+PS E:\xampp\htdocs\brewhub> git add .
+PS E:\xampp\htdocs\brewhub> git commit -m "final capstone"
+[main f43a2fc] final capstone
+ 14 files changed, 1503 insertions(+), 49 deletions(-)
+ create mode 100644 app/Http/Controllers/CartController.php
+ create mode 100644 app/Models/Cart.php
+ create mode 100644 app/Models/CartItem.php
+ create mode 100644 database/migrations/2026_04_28_150355_create_carts_table.php
+ create mode 100644 database/migrations/2026_04_28_150442_create_cart_items_table.php
+ create mode 100644 resources/js/Pages/Cart/Index.vue
+ create mode 100644 resources/js/Pages/History/Index.vue
+ create mode 100644 resources/js/Pages/Products/Show.vue
+PS E:\xampp\htdocs\brewhub> git pull origin main --rebase
+From https://github.com/Admnoer/brewhub
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+PS E:\xampp\htdocs\brewhub> git push
+Enumerating objects: 46, done.
+Counting objects: 100% (46/46), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (29/29), 12.41 KiB | 1.55 MiB/s, done.
+Total 29 (delta 11), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (11/11), completed with 9 local objects.
+To https://github.com/Admnoer/brewhub.git
+   6089ef6..f43a2fc  main -> main
