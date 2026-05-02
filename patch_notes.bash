@@ -2762,3 +2762,22 @@ Total 29 (delta 11), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (11/11), completed with 9 local objects.
 To https://github.com/Admnoer/brewhub.git
    6089ef6..f43a2fc  main -> main
+PS E:\xampp\htdocs\brewhub> git add .
+PS E:\xampp\htdocs\brewhub> git commit -m "final capstone"
+[main 0eac4cc] final capstone
+ 2 files changed, 142 insertions(+), 2 deletions(-)
+PS E:\xampp\htdocs\brewhub> git pull origin main --rebase
+From https://github.com/Admnoer/brewhub
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+PS E:\xampp\htdocs\brewhub> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.46 KiB | 1.46 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Admnoer/brewhub.git
+   f43a2fc..0eac4cc  main -> main
+PS E:\xampp\htdocs\brewhub>npm run dev terus php artisan serve
